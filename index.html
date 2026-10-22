@@ -131,6 +131,7 @@ nav a:hover {
   text-align: center;
   transition: 0.3s;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 .btn:hover {
   background: transparent;
@@ -215,6 +216,10 @@ section {
 }
 .music-card .btn {
   width: 100%;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .video-box {
   text-align: center;
@@ -351,16 +356,16 @@ footer span {
 <header>
   <div class="container navbar">
     <a href="#home" class="logo">TERRY NATION</a>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#music">Music</a>
-      <a href="#videos">Videos</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#events">Events</a>
-      <a href="#socials">Socials</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#music">Music</a>
+  <a href="#videos">Videos</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#events">Events</a>
+  <a href="#socials">Socials</a>
+  <a href="#contact">Contact</a>
+</nav>
   </div>
 </header>
 <main>
@@ -368,22 +373,24 @@ footer span {
   <div class="container">
     <div class="hero-content">
       <div class="eyebrow">Official Artist Website</div>
-      <h1>TERRY <span>NATION</span></h1>
-      <p>
-        Welcome to the official home of Terry Nation.
-        Discover the music, experience the sound, and stay
-        connected for new releases, videos, and updates.
-      </p>
-      <div class="buttons">
-        <a class="btn"
-           href="https://li.sten.to/z4ipx0d1">
-          STREAM DANCEFLOOR
-        </a>
-        <a class="btn btn-outline" href="#music">
-          EXPLORE MUSIC
-        </a>
-      </div>
-    </div>
+  <h1>TERRY <span>NATION</span></h1>
+  <p>
+    Welcome to the official home of Terry Nation.
+    Discover the music, experience the sound, and stay
+    connected for new releases, videos, and updates.
+  </p>
+  <div class="buttons">
+    <a class="btn"
+       href="https://li.sten.to/z4ipx0d1"
+       target="_blank"
+       rel="noopener noreferrer">
+      STREAM DANCEFLOOR
+    </a>
+    <a class="btn btn-outline" href="#music">
+      EXPLORE MUSIC
+    </a>
+  </div>
+</div>
   </div>
 </section>
 <section id="about">
@@ -392,34 +399,36 @@ footer span {
       <h2>ABOUT <span>TERRY NATION</span></h2>
       <p>Get to know the artist behind the music.</p>
     </div>
-    <div class="about-grid">
-      <div class="about-image">
-        <img
-          src="/images/f88218ad-f6cc-4622-b883-c95d34ccded8.jpeg"
-          alt="Terry Nation artist portrait">
-      </div>
-      <div class="about-text">
-        <h3>The Sound. The Vision. The Journey.</h3>
-        <p>
-          Terry Nation is an artist and music creator building
-          his sound, sharing his creativity, and connecting
-          with listeners through music.
-        </p>
-        <p>
-          From studio sessions to new releases and live
-          experiences, follow the journey and discover the
-          music as it unfolds.
-        </p>
-        <p>
-          Stay connected for new songs, videos, behind-the-scenes
-          moments, and upcoming appearances.
-        </p>
-        <a class="btn"
-           href="https://www.tiktok.com/@itzterryonthetrack">
-          FOLLOW THE JOURNEY
-        </a>
-      </div>
-    </div>
+<div class="about-grid">
+  <div class="about-image">
+    <img
+      src="/images/f88218ad-f6cc-4622-b883-c95d34ccded8.jpeg"
+      alt="Terry Nation artist portrait">
+  </div>
+  <div class="about-text">
+    <h3>The Sound. The Vision. The Journey.</h3>
+    <p>
+      Terry Nation is an artist and music creator building
+      his sound, sharing his creativity, and connecting
+      with listeners through music.
+    </p>
+    <p>
+      From studio sessions to new releases and live
+      experiences, follow the journey and discover the
+      music as it unfolds.
+    </p>
+    <p>
+      Stay connected for new songs, videos, behind-the-scenes
+      moments, and upcoming appearances.
+    </p>
+    <a class="btn"
+       href="https://www.tiktok.com/@itzterryonthetrack"
+       target="_blank"
+       rel="noopener noreferrer">
+      FOLLOW THE JOURNEY
+    </a>
+  </div>
+</div>
   </div>
 </section>
 <section class="music-section" id="music">
@@ -428,35 +437,41 @@ footer span {
       <h2>LATEST <span>MUSIC</span></h2>
       <p>Choose a song to open its music-platform page.</p>
     </div>
-    <div class="music-grid">
-      <div class="music-card">
-        <div class="music-icon">🎵</div>
-        <h3>DANCEFLOOR</h3>
-        <p>Listen on your preferred music platform.</p>
-        <a class="btn"
-           href="https://li.sten.to/z4ipx0d1">
-          LISTEN TO DANCEFLOOR
-        </a>
-      </div>
-      <div class="music-card">
-        <div class="music-icon">☀️</div>
-        <h3>SUNNY DAYS</h3>
-        <p>Find the song on your favourite service.</p>
-        <a class="btn"
-           href="https://ffm.to/sunny-days-dqaj">
-          LISTEN TO SUNNY DAYS
-        </a>
-      </div>
-      <div class="music-card">
-        <div class="music-icon">🔥</div>
-        <h3>WTFAY?</h3>
-        <p>Listen to the latest release.</p>
-        <a class="btn"
-           href="https://release.studio/wtfay">
-          LISTEN TO WTFAY?
-        </a>
-      </div>
-    </div>
+<div class="music-grid">
+  <div class="music-card">
+    <div class="music-icon">🎵</div>
+    <h3>DANCEFLOOR</h3>
+    <p>Listen on your preferred music platform.</p>
+    <a class="btn"
+       href="https://li.sten.to/z4ipx0d1"
+       target="_blank"
+       rel="noopener noreferrer">
+      LISTEN TO DANCEFLOOR
+    </a>
+  </div>
+  <div class="music-card">
+    <div class="music-icon">☀️</div>
+    <h3>SUNNY DAYS</h3>
+    <p>Find the song on your favourite service.</p>
+    <a class="btn"
+       href="https://ffm.to/sunny-days-dqaj"
+       target="_blank"
+       rel="noopener noreferrer">
+      LISTEN TO SUNNY DAYS
+    </a>
+  </div>
+  <div class="music-card">
+    <div class="music-icon">🔥</div>
+    <h3>WTFAY?</h3>
+    <p>Listen to the latest release.</p>
+    <a class="btn"
+       href="https://release.studio/wtfay"
+       target="_blank"
+       rel="noopener noreferrer">
+      LISTEN TO WTFAY?
+    </a>
+  </div>
+</div>
   </div>
 </section>
 <section id="videos">
@@ -465,18 +480,20 @@ footer span {
       <h2>MUSIC <span>VIDEOS</span></h2>
       <p>Watch, discover, and stay connected.</p>
     </div>
-    <div class="video-box">
-      <div class="music-icon">▶️</div>
-      <h3>Watch Terry Nation on YouTube</h3>
-      <p>
-        Explore music content, videos, studio moments,
-        and more on the official YouTube channel.
-      </p>
-      <a class="btn"
-         href="https://youtube.com/@terrymusicworld">
-        VISIT YOUTUBE CHANNEL
-      </a>
-    </div>
+<div class="video-box">
+  <div class="music-icon">▶️</div>
+  <h3>Watch Terry Nation on YouTube</h3>
+  <p>
+    Explore music content, videos, studio moments,
+    and more on the official YouTube channel.
+  </p>
+  <a class="btn"
+     href="https://youtube.com/@terrymusicworld"
+     target="_blank"
+     rel="noopener noreferrer">
+    VISIT YOUTUBE CHANNEL
+  </a>
+</div>
   </div>
 </section>
 <section class="gallery" id="gallery">
@@ -485,16 +502,16 @@ footer span {
       <h2>PHOTO <span>GALLERY</span></h2>
       <p>Moments from Terry Nation's journey.</p>
     </div>
-    <div class="gallery-grid">
-      <img
-        src="/images/IMG_8955.jpeg"
-        alt="Terry Nation photo gallery image"
-        loading="lazy">
-      <img
-        src="/images/f88218ad-f6cc-4622-b883-c95d34ccded8.jpeg"
-        alt="Terry Nation artist portrait"
-        loading="lazy">
-    </div>
+<div class="gallery-grid">
+  <img
+    src="/images/IMG_8955.jpeg"
+    alt="Terry Nation photo gallery image"
+    loading="lazy">
+  <img
+    src="/images/f88218ad-f6cc-4622-b883-c95d34ccded8.jpeg"
+    alt="Terry Nation artist portrait"
+    loading="lazy">
+</div>
   </div>
 </section>
 <section id="events">
@@ -503,17 +520,17 @@ footer span {
       <h2>SHOWS & <span>EVENTS</span></h2>
       <p>For performances, appearances, and bookings.</p>
     </div>
-    <div class="events-box">
-      <h3>Book Terry Nation</h3>
-      <p>
-        Interested in booking Terry Nation for a show,
-        event, or performance? Contact the team for enquiries.
-      </p>
-      <a class="btn"
-         href="mailto:Terrymusicteam@gmail.com?subject=Terry%20Nation%20Booking%20Enquiry">
-        BOOKING ENQUIRIES
-      </a>
-    </div>
+<div class="events-box">
+  <h3>Book Terry Nation</h3>
+  <p>
+    Interested in booking Terry Nation for a show,
+    event, or performance? Contact the team for enquiries.
+  </p>
+  <a class="btn"
+     href="mailto:Terrymusicteam@gmail.com?subject=Terry%20Nation%20Booking%20Enquiry">
+    BOOKING ENQUIRIES
+  </a>
+</div>
   </div>
 </section>
 <section id="socials">
@@ -522,32 +539,42 @@ footer span {
       <h2>FOLLOW <span>TERRY NATION</span></h2>
       <p>Stay connected for music, videos, and updates.</p>
     </div>
-    <div class="social-grid">
-      <a class="social-link"
-         href="https://www.tiktok.com/@itzterryonthetrack">
-        🎵 TikTok
-      </a>
-      <a class="social-link"
-         href="https://youtube.com/@terrymusicworld">
-        ▶ YouTube
-      </a>
-      <a class="social-link"
-         href="https://li.sten.to/z4ipx0d1">
-        🎧 DANCEFLOOR
-      </a>
-      <a class="social-link"
-         href="https://ffm.to/sunny-days-dqaj">
-        ☀ SUNNY DAYS
-      </a>
-      <a class="social-link"
-         href="https://release.studio/wtfay">
-        🔥 WTFAY?
-      </a>
-      <a class="social-link"
-         href="mailto:Terrymusicteam@gmail.com">
-        ✉ Email the Team
-      </a>
-    </div>
+<div class="social-grid">
+  <a class="social-link"
+     href="https://www.tiktok.com/@itzterryonthetrack"
+     target="_blank"
+     rel="noopener noreferrer">
+    🎵 TikTok
+  </a>
+  <a class="social-link"
+     href="https://youtube.com/@terrymusicworld"
+     target="_blank"
+     rel="noopener noreferrer">
+    ▶ YouTube
+  </a>
+  <a class="social-link"
+     href="https://li.sten.to/z4ipx0d1"
+     target="_blank"
+     rel="noopener noreferrer">
+    🎧 DANCEFLOOR
+  </a>
+  <a class="social-link"
+     href="https://ffm.to/sunny-days-dqaj"
+     target="_blank"
+     rel="noopener noreferrer">
+    ☀ SUNNY DAYS
+  </a>
+  <a class="social-link"
+     href="https://release.studio/wtfay"
+     target="_blank"
+     rel="noopener noreferrer">
+    🔥 WTFAY?
+  </a>
+  <a class="social-link"
+     href="mailto:Terrymusicteam@gmail.com">
+    ✉ Email the Team
+  </a>
+</div>
   </div>
 </section>
 <section class="contact" id="contact">
@@ -556,24 +583,26 @@ footer span {
       <h2>GET IN <span>TOUCH</span></h2>
       <p>For bookings, collaborations, and business enquiries.</p>
     </div>
-    <p>
-      Email:
-      <a style="color:var(--gold)"
-         href="mailto:Terrymusicteam@gmail.com">
-        Terrymusicteam@gmail.com
-      </a>
-    </p>
-    <p>Bookings and enquiries are welcome.</p>
-    <div class="buttons">
-      <a class="btn"
-         href="https://wa.me/2348161512750?text=Hello%20Terry%20Nation%20Team%2C%20I%20would%20like%20to%20make%20an%20enquiry.">
-        CHAT ON WHATSAPP
-      </a>
-      <a class="btn btn-outline"
-         href="mailto:Terrymusicteam@gmail.com?subject=Terry%20Nation%20Enquiry">
-        SEND AN EMAIL
-      </a>
-    </div>
+<p>
+  Email:
+  <a style="color:var(--gold)"
+     href="mailto:Terrymusicteam@gmail.com">
+    Terrymusicteam@gmail.com
+  </a>
+</p>
+<p>Bookings and enquiries are welcome.</p>
+<div class="buttons">
+  <a class="btn"
+     href="https://wa.me/2348161512750?text=Hello%20Terry%20Nation%20Team%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+     target="_blank"
+     rel="noopener noreferrer">
+    CHAT ON WHATSAPP
+  </a>
+  <a class="btn btn-outline"
+     href="mailto:Terrymusicteam@gmail.com?subject=Terry%20Nation%20Enquiry">
+    SEND AN EMAIL
+  </a>
+</div>
   </div>
 </section>
 </main>
@@ -589,5 +618,4 @@ document.getElementById("year").textContent =
   new Date().getFullYear();
 </script>
 </body>
-</html>
-`
+</htm
