@@ -1,0 +1,18 @@
+media:
+  input: images
+  output: /images
+content:
+  - name: site
+    label: Website Content
+    type: file
+    path: index.html
+    format: html
+    fields:
+      - name: title
+        label: Browser Title
+        type: string
+        required: true
+      - name: body
+        label: Website HTML
+        type: text
+        required: true
