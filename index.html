@@ -3,407 +3,762 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Official website of Terry Nation — music, videos, photos, performances and latest updates.">
 <meta name="theme-color" content="#080808">
+
+<meta name="description"
+content="Welcome to Terry Nation's official website. Discover his music, videos, photos, latest releases and live performances.">
+
 <title>Terry Nation | Official Artist Website</title>
+
 <style>
 :root {
   --gold: #d8b15a;
   --black: #080808;
   --panel: #151515;
   --muted: #b9b9b9;
+  --white: #f8f4ea;
 }
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 90px;
+  scroll-padding-top: 85px;
 }
+
 body {
-  margin: 0;
   background: var(--black);
-  color: #f8f4ea;
+  color: var(--white);
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
 }
+
 a {
   color: var(--gold);
   text-decoration: none;
+  transition: 0.3s;
 }
+
 a:hover {
-  opacity: 0.8;
+  opacity: 0.75;
 }
+
 img {
   max-width: 100%;
+  display: block;
 }
-.wrap {
-  width: min(1120px, 92%);
+
+.container {
+  width: min(1120px, 90%);
   margin: auto;
 }
+
+/* NAVIGATION */
+
 header {
   position: sticky;
   top: 0;
-  background: rgba(8, 8, 8, 0.96);
-  border-bottom: 1px solid #29231a;
   z-index: 100;
-  backdrop-filter: blur(8px);
+  background: rgba(8, 8, 8, 0.97);
+  border-bottom: 1px solid #302719;
+  backdrop-filter: blur(10px);
 }
-.nav {
+
+.navbar {
+  min-height: 76px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
-  padding: 16px 0;
+  gap: 20px;
 }
-.brand {
-  font-size: 1.2rem;
+
+.logo {
+  font-size: 1.15rem;
   font-weight: 900;
-  letter-spacing: 0.14em;
+  letter-spacing: 3px;
   color: var(--gold);
   white-space: nowrap;
 }
+
 nav {
   display: flex;
-  gap: 18px;
   flex-wrap: wrap;
-  font-size: 0.9rem;
+  gap: 20px;
 }
+
 nav a {
-  color: #f4f0e8;
+  color: var(--white);
+  font-size: 0.88rem;
 }
+
+/* HOMEPAGE COVER */
+
 .hero {
-  min-height: 85vh;
+  min-height: 88vh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
+
   background:
     linear-gradient(
       90deg,
-      rgba(8,8,8,0.96) 0%,
-      rgba(8,8,8,0.78) 45%,
+      rgba(8,8,8,0.97) 0%,
+      rgba(8,8,8,0.80) 45%,
       rgba(8,8,8,0.25) 100%
     ),
     linear-gradient(
-      rgba(8,8,8,0.15),
-      rgba(8,8,8,0.45)
+      0deg,
+      rgba(8,8,8,0.60),
+      transparent
     ),
     url('/images/f88218ad-f6cc-4622-b883-c95d34ccded8.jpeg')
     center 30% / cover no-repeat;
-  padding: 70px 0;
 }
+
 .hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 720px;
+  padding: 75px 0;
+  max-width: 760px;
 }
+
 .eyebrow {
   color: var(--gold);
   text-transform: uppercase;
-  letter-spacing: 0.22em;
+  letter-spacing: 4px;
   font-size: 0.8rem;
   font-weight: bold;
 }
+
 .hero h1 {
-  font-size: clamp(3rem, 9vw, 7rem);
-  line-height: 0.94;
-  margin: 18px 0;
-  letter-spacing: -0.04em;
+  font-size: clamp(3.5rem, 10vw, 7.5rem);
+  line-height: 0.95;
+  letter-spacing: -4px;
+  margin: 22px 0;
 }
+
 .hero p {
-  max-width: 590px;
+  max-width: 570px;
+  font-size: 1.08rem;
   color: #e1ddd5;
-  font-size: 1.1rem;
+  margin-bottom: 22px;
 }
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
 .btn {
   display: inline-block;
-  padding: 12px 20px;
+  padding: 12px 22px;
   border: 1px solid var(--gold);
-  margin: 8px 10px 0 0;
   font-weight: bold;
-  transition: 0.3s;
 }
-.btn.primary {
+
+.btn-primary {
   background: var(--gold);
-  color: #080808;
+  color: var(--black);
 }
+
 .btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
-section {
-  padding: 72px 0;
+
+/* GENERAL SECTIONS */
+
+section:not(.hero) {
+  padding: 85px 0;
   border-top: 1px solid #252119;
 }
+
 .section-title {
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  margin: 0 0 10px;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.15;
+  margin: 12px 0;
 }
-.sub {
+
+.section-description {
   color: var(--muted);
-  margin: 0 0 28px;
+  margin-bottom: 32px;
+  max-width: 700px;
 }
-.grid {
+
+.gold {
+  color: var(--gold);
+}
+
+/* ABOUT */
+
+.about-box {
+  background: var(--panel);
+  border: 1px solid #332a1c;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.about-box p {
+  color: #d0ccc4;
+}
+
+/* MUSIC */
+
+.music-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.music-card {
+  background: var(--panel);
+  border: 1px solid #302719;
+  padding: 28px;
+  transition: 0.3s;
+}
+
+.music-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+
+.music-card h3 {
+  font-size: 1.55rem;
+  margin: 16px 0 8px;
+  color: var(--gold);
+}
+
+.music-card p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.badge {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  letter-spacing: 1px;
+}
+
+/* VIDEOS */
+
+.video-box {
+  background: var(--panel);
+  padding: 32px;
+  border: 1px solid #302719;
+  border-radius: 5px;
+}
+
+.video-box p {
+  color: #ccc;
+  margin: 12px 0 20px;
+}
+
+/* GALLERY */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
-.card {
-  background: var(--panel);
-  border: 1px solid #29251d;
-  padding: 22px;
-  border-radius: 4px;
-}
-.card h3 {
-  margin: 0 0 8px;
-  color: var(--gold);
-}
-.card p {
-  color: #ccc;
-}
-.photos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-}
-.photos img {
+
+.gallery img {
   width: 100%;
-  height: 320px;
+  height: 350px;
   object-fit: cover;
   object-position: center;
-  border: 1px solid #3a3020;
+  border: 1px solid #302719;
   border-radius: 4px;
-  display: block;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
 }
-.photos img:hover {
+
+.gallery img:hover {
   transform: scale(1.02);
 }
-.music-link {
-  display: block;
-  padding: 12px 0;
-  border-bottom: 1px solid #393124;
+
+/* EVENTS */
+
+.event-box {
+  padding: 30px;
+  background: var(--panel);
+  border-left: 3px solid var(--gold);
 }
-.pill {
-  font-size: 0.75rem;
-  border: 1px solid #68532b;
-  color: var(--gold);
-  padding: 4px 8px;
-  display: inline-block;
+
+.event-box p {
+  color: #ccc;
+  margin-top: 10px;
 }
-.socials {
+
+/* SOCIALS */
+
+.social-links {
   display: flex;
-  gap: 15px;
   flex-wrap: wrap;
+  gap: 14px;
 }
+
+.social-links a {
+  padding: 10px 17px;
+  border: 1px solid #453820;
+}
+
+.social-links a:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+/* CONTACT */
+
+.contact-box {
+  background: linear-gradient(135deg, #18150f, #0c0c0c);
+  border: 1px solid #453820;
+  padding: 35px;
+}
+
+.contact-box p {
+  color: #ccc;
+  margin: 12px 0 22px;
+}
+
+/* FOOTER */
+
 footer {
-  padding: 30px 0;
+  padding: 28px 0;
+  border-top: 1px solid #302719;
   color: #aaa;
-  border-top: 1px solid #29231a;
   font-size: 0.9rem;
 }
-@media (max-width: 650px) {
-  .nav {
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+  .navbar {
+    padding: 17px 0;
     align-items: flex-start;
     flex-direction: column;
   }
+
   nav {
-    gap: 12px;
+    gap: 12px 17px;
   }
+
   .hero {
-    min-height: 75vh;
-    padding: 50px 0;
+    min-height: 78vh;
     background-position: center center;
   }
+
   .hero h1 {
-    font-size: clamp(3rem, 15vw, 5rem);
+    font-size: clamp(3.3rem, 15vw, 5rem);
+    letter-spacing: -2px;
   }
-  .photos {
+
+  section:not(.hero) {
+    padding: 60px 0;
+  }
+
+  .music-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
   }
-  .photos img {
-    height: 220px;
+
+  .gallery img {
+    height: 230px;
+  }
+
+  .about-box,
+  .video-box,
+  .contact-box {
+    padding: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
   }
 }
 </style>
 </head>
+
 <body>
+
+<!-- NAVIGATION -->
+
 <header>
-  <div class="wrap nav">
-    <a class="brand" href="#home">TERRY NATION</a>
-<nav aria-label="Main navigation">
-  <a href="#about">About</a>
-  <a href="#music">Music</a>
-  <a href="#videos">Videos</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#events">Events</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <div class="container navbar">
+
+    <a class="logo" href="#home">TERRY NATION</a>
+
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#music">Music</a>
+      <a href="#videos">Videos</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#events">Events</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
   </div>
 </header>
+
 <main>
-<!-- HOME / COVER PHOTO -->
+
+<!-- HOMEPAGE -->
+
 <section class="hero" id="home">
-  <div class="wrap hero-content">
+  <div class="container hero-content">
+
     <div class="eyebrow">Official Artist Website</div>
-<h1>TERRY<br>NATION.</h1>
-<p>
-  Music, movement, and moments that stay with you.
-  Discover the music, watch the videos, explore the journey,
-  and stay connected with Terry Nation.
-</p>
-<a class="btn primary" href="#music">Explore Music</a>
-<a class="btn" href="#contact">Follow the Journey</a>
+
+    <h1>TERRY<br>NATION.</h1>
+
+    <p>
+      The sound. The vision. The movement.
+      Welcome to the official home of Terry Nation.
+      Discover the music, watch the videos, explore the journey,
+      and stay connected with every new chapter.
+    </p>
+
+    <div class="buttons">
+      <a class="btn btn-primary" href="#music">
+        EXPLORE MUSIC
+      </a>
+
+      <a class="btn" href="#gallery">
+        VIEW GALLERY
+      </a>
+    </div>
+
   </div>
 </section>
+
 <!-- ABOUT -->
+
 <section id="about">
-  <div class="wrap">
+  <div class="container">
+
     <div class="eyebrow">The Artist</div>
-<h2 class="section-title">About Terry Nation</h2>
-<p class="sub">A sound and story still unfolding.</p>
-<div class="card">
-  <p>
-    Terry Nation is an artist passionate about creating music
-    and sharing memorable experiences through sound and performance.
-    Explore his releases, studio sessions, live appearances,
-    and latest updates as his musical journey continues.
-  </p>
-</div>
+
+    <h2 class="section-title">
+      ABOUT <span class="gold">TERRY NATION</span>
+    </h2>
+
+    <p class="section-description">
+      Every artist has a story. This is where the journey continues.
+    </p>
+
+    <div class="about-box">
+      <p>
+        Terry Nation is an artist dedicated to creating music
+        and sharing memorable experiences through sound and performance.
+        From studio sessions to live appearances, every chapter
+        represents growth, creativity and a passion for music.
+        Explore his releases, discover new content and follow
+        the journey as it continues to unfold.
+      </p>
+    </div>
+
   </div>
 </section>
+
 <!-- MUSIC -->
+
 <section id="music">
-  <div class="wrap">
+  <div class="container">
+
     <div class="eyebrow">Listen Now</div>
-<h2 class="section-title">Music</h2>
-<p class="sub">
-  Discover Terry Nation's releases and favourite tracks.
-</p>
-<div class="grid">
-  <div class="card">
-    <span class="pill">OUT NOW</span>
-    <h3>DANCEFLOOR</h3>
-    <p>Turn up the energy and enjoy the sound.</p>
-    <a href="#contact">Listen to DANCEFLOOR →</a>
-  </div>
-  <div class="card">
-    <span class="pill">OUT NOW</span>
-    <h3>SUNNY DAYS</h3>
-    <p>Good vibes and brighter days through music.</p>
-    <a href="#contact">Listen to SUNNY DAYS →</a>
-  </div>
-  <div class="card">
-    <span class="pill">LATEST RELEASE</span>
-    <h3>WTFAY?</h3>
-    <p>Check out the latest release from Terry Nation.</p>
-    <a href="#contact">Listen to WTFAY? →</a>
-  </div>
-</div>
+
+    <h2 class="section-title">
+      LATEST <span class="gold">MUSIC</span>
+    </h2>
+
+    <p class="section-description">
+      Discover the sounds and releases of Terry Nation.
+      Select a track to listen.
+    </p>
+
+    <div class="music-grid">
+
+      <article class="music-card">
+        <span class="badge">OUT NOW</span>
+
+        <h3>DANCEFLOOR</h3>
+
+        <p>
+          Turn up the energy and experience the sound.
+        </p>
+
+        <!-- Replace # with the actual DANCEFLOOR music link -->
+        <a href="#contact" class="btn">
+          LISTEN NOW →
+        </a>
+      </article>
+
+      <article class="music-card">
+        <span class="badge">OUT NOW</span>
+
+        <h3>SUNNY DAYS</h3>
+
+        <p>
+          Good vibes, brighter days and music to enjoy.
+        </p>
+
+        <!-- Replace # with the actual SUNNY DAYS music link -->
+        <a href="#contact" class="btn">
+          LISTEN NOW →
+        </a>
+      </article>
+
+      <article class="music-card">
+        <span class="badge">LATEST RELEASE</span>
+
+        <h3>WTFAY?</h3>
+
+        <p>
+          Discover the latest release from Terry Nation.
+        </p>
+
+        <!-- Replace # with the actual WTFAY? music link -->
+        <a href="#contact" class="btn">
+          LISTEN NOW →
+        </a>
+      </article>
+
+    </div>
   </div>
 </section>
+
 <!-- VIDEOS -->
+
 <section id="videos">
-  <div class="wrap">
+  <div class="container">
+
     <div class="eyebrow">Watch</div>
-<h2 class="section-title">Videos</h2>
-<p class="sub">
-  Music videos, studio sessions, live performances,
-  and behind-the-scenes moments.
-</p>
-<div class="card">
-  <h3>Watch Terry Nation</h3>
-  <p>
-    Visit Terry Nation's official YouTube channel to discover
-    music videos, performances, and new content.
-  </p>
-  <a href="https://www.youtube.com/"
-     target="_blank"
-     rel="noopener noreferrer">
-    Visit YouTube →
-  </a>
-</div>
+
+    <h2 class="section-title">
+      VIDEO <span class="gold">WORLD</span>
+    </h2>
+
+    <p class="section-description">
+      Music videos, studio sessions, performances and
+      behind-the-scenes moments.
+    </p>
+
+    <div class="video-box">
+      <h3>Watch Terry Nation</h3>
+
+      <p>
+        Visit YouTube to discover music videos, performances
+        and more content from Terry Nation.
+      </p>
+
+      <a
+        class="btn btn-primary"
+        href="https://www.youtube.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        WATCH VIDEOS →
+      </a>
+    </div>
+
   </div>
 </section>
+
 <!-- PHOTO GALLERY -->
+
 <section id="gallery">
-  <div class="wrap">
+  <div class="container">
+
     <div class="eyebrow">In Pictures</div>
-<h2 class="section-title">Gallery</h2>
-<p class="sub">
-  Artist portraits, studio sessions, and show highlights.
-</p>
-<div class="photos">
-  <img
-    src="/images/IMG_8955.jpeg"
-    alt="Terry Nation artist photograph"
-    loading="lazy"
-  >
-  <img
-    src="/images/f88218ad-f6cc-4622-b883-c95d34ccded8.jpeg"
-    alt="Terry Nation cover photograph"
-    loading="lazy"
-  >
-</div>
+
+    <h2 class="section-title">
+      PHOTO <span class="gold">GALLERY</span>
+    </h2>
+
+    <p class="section-description">
+      Artist portraits, studio sessions and special moments.
+    </p>
+
+    <div class="gallery">
+
+      <img
+        src="/images/IMG_8955.jpeg"
+        alt="Terry Nation artist photograph"
+        loading="lazy"
+      >
+
+      <img
+        src="/images/f88218ad-f6cc-4622-b883-c95d34ccded8.jpeg"
+        alt="Terry Nation cover photograph"
+        loading="lazy"
+      >
+
+    </div>
+
   </div>
 </section>
+
 <!-- EVENTS -->
+
 <section id="events">
-  <div class="wrap">
+  <div class="container">
+
     <div class="eyebrow">On The Move</div>
-<h2 class="section-title">Events & Performances</h2>
-<p class="sub">
-  Stay updated on appearances, performances, and announcements.
-</p>
-<div class="card">
-  <h3>More Shows Coming Soon</h3>
-  <p>
-    Check back for upcoming dates, event announcements,
-    and performance updates.
-  </p>
-</div>
+
+    <h2 class="section-title">
+      EVENTS & <span class="gold">PERFORMANCES</span>
+    </h2>
+
+    <p class="section-description">
+      Stay connected for show announcements, live appearances
+      and upcoming performances.
+    </p>
+
+    <div class="event-box">
+      <h3>More Shows Coming Soon</h3>
+
+      <p>
+        New appearances and performance announcements will be
+        shared here. Follow Terry Nation on social media
+        to stay updated.
+      </p>
+    </div>
+
   </div>
 </section>
-<!-- CONTACT AND SOCIAL MEDIA -->
+
+<!-- SOCIAL MEDIA -->
+
+<section id="socials">
+  <div class="container">
+
+    <div class="eyebrow">Join The Journey</div>
+
+    <h2 class="section-title">
+      FOLLOW <span class="gold">TERRY NATION</span>
+    </h2>
+
+    <p class="section-description">
+      Connect with Terry Nation and keep up with the latest music,
+      videos and announcements.
+    </p>
+
+    <div class="social-links">
+
+      <a href="https://www.instagram.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Instagram
+      </a>
+
+      <a href="https://www.tiktok.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        TikTok
+      </a>
+
+      <a href="https://www.facebook.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Facebook
+      </a>
+
+      <a href="https://www.youtube.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        YouTube
+      </a>
+
+      <a href="https://open.spotify.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Spotify
+      </a>
+
+      <a href="https://music.apple.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Apple Music
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+
 <section id="contact">
-  <div class="wrap">
-    <div class="eyebrow">Stay Connected</div>
-<h2 class="section-title">Follow Terry Nation</h2>
-<p class="sub">
-  Follow Terry Nation online and stay connected with the journey.
-</p>
-<div class="socials">
-  <a href="https://www.instagram.com/"
-     target="_blank" rel="noopener noreferrer">Instagram</a>
-  <a href="https://www.tiktok.com/"
-     target="_blank" rel="noopener noreferrer">TikTok</a>
-  <a href="https://www.facebook.com/"
-     target="_blank" rel="noopener noreferrer">Facebook</a>
-  <a href="https://www.youtube.com/"
-     target="_blank" rel="noopener noreferrer">YouTube</a>
-  <a href="https://open.spotify.com/"
-     target="_blank" rel="noopener noreferrer">Spotify</a>
-  <a href="https://music.apple.com/"
-     target="_blank" rel="noopener noreferrer">Apple Music</a>
-</div>
-<p style="margin-top:30px;color:#aaa">
-  Bookings and enquiries: official contact details coming soon.
-</p>
+  <div class="container">
+
+    <div class="contact-box">
+
+      <div class="eyebrow">Bookings & Enquiries</div>
+
+      <h2 class="section-title">
+        LET'S <span class="gold">CONNECT</span>
+      </h2>
+
+      <p>
+        For bookings, collaborations, performances and business
+        enquiries, please use Terry Nation's official contact details.
+      </p>
+
+      <!-- Add an official booking email or WhatsApp link here -->
+      <a class="btn btn-primary" href="#socials">
+        CONNECT WITH TERRY →
+      </a>
+
+    </div>
+
   </div>
 </section>
+
 </main>
+
+<!-- FOOTER -->
+
 <footer>
-  <div class="wrap">
-    © <span id="year"></span> Terry Nation. All rights reserved.
-<span style="float:right">
-  <a href="/admin/">Content Editor</a>
-</span>
+  <div class="container footer-content">
+
+    <p>
+      © <span id="year"></span> Terry Nation.
+      All rights reserved.
+    </p>
+
+    <a href="#home">BACK TO TOP ↑</a>
+
   </div>
 </footer>
+
 <script>
 document.getElementById("year").textContent =
   new Date().getFullYear();
 </script>
+
 </body>
-</html
+</html>
