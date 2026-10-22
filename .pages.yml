@@ -1,31 +1,29 @@
-}
 media:
-input: images
-output: /images
+  input: images
+  output: /images
 
 content:
-
-* name: site
+  - name: site
     label: Artist Information
     type: file
     path: content/site.json
     format: json
     fields:
-    * name: artist_name
+      - name: artist_name
         label: Artist Name
         type: string
-    * name: biography
+      - name: biography
         label: Biography
         type: text
-    * name: instagram
+      - name: instagram
         label: Instagram Link
         type: string
-    * name: tiktok
+      - name: tiktok
         label: TikTok Link
         type: string
-    * name: facebook
+      - name: facebook
         label: Facebook Link
         type: string
-    * name: youtube
+      - name: youtube
         label: YouTube Link
-        type: strin
+        type: string
