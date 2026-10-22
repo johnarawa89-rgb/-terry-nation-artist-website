@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terry Nation | Official Artist Website</title>
-<meta name="description" content="Welcome to Terry Nation's official website. Discover his music, videos, photos, and latest releases.">
-
+<meta name="description" content="Welcome to Terry Nation's official website. Discover his music, videos, photos, latest releases, and upcoming events.">
+<meta name="theme-color" content="#080808">
 <style>
 :root {
   --gold: #d6ad55;
@@ -14,36 +14,30 @@
   --white: #ffffff;
   --gray: #bdbdbd;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
 body {
   background: var(--black);
   color: var(--white);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
-
 a {
   text-decoration: none;
 }
-
 img {
   max-width: 100%;
   display: block;
 }
-
 .container {
   width: 90%;
   max-width: 1150px;
   margin: auto;
 }
-
 header {
   background: rgba(8, 8, 8, 0.97);
   border-bottom: 1px solid #292929;
@@ -51,7 +45,6 @@ header {
   top: 0;
   z-index: 1000;
 }
-
 .navbar {
   min-height: 75px;
   display: flex;
@@ -61,29 +54,24 @@ header {
   flex-wrap: wrap;
   padding: 12px 0;
 }
-
 .logo {
   color: var(--gold);
   font-size: 23px;
   font-weight: 900;
   letter-spacing: 2px;
 }
-
 nav {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
 }
-
 nav a {
   color: white;
   font-size: 13px;
 }
-
 nav a:hover {
   color: var(--gold);
 }
-
 .hero {
   min-height: 85vh;
   display: flex;
@@ -99,11 +87,9 @@ nav a:hover {
     center 30% / cover no-repeat;
   padding: 80px 0;
 }
-
 .hero-content {
   max-width: 700px;
 }
-
 .eyebrow {
   color: var(--gold);
   text-transform: uppercase;
@@ -111,33 +97,28 @@ nav a:hover {
   font-size: 13px;
   font-weight: bold;
 }
-
 .hero h1 {
   font-size: clamp(48px, 9vw, 95px);
   line-height: 1.05;
   margin: 15px 0;
   font-weight: 900;
 }
-
 .hero h1 span,
 .section-title span {
   color: var(--gold);
 }
-
 .hero p {
   color: #eeeeee;
   font-size: 17px;
   max-width: 550px;
   margin-bottom: 25px;
 }
-
 .buttons {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
   margin-top: 22px;
 }
-
 .btn {
   display: inline-block;
   padding: 13px 22px;
@@ -149,45 +130,38 @@ nav a:hover {
   font-size: 14px;
   text-align: center;
   transition: 0.3s;
+  cursor: pointer;
 }
-
 .btn:hover {
   background: transparent;
   color: var(--gold);
 }
-
 .btn-outline {
   background: transparent;
   color: var(--gold);
 }
-
 section {
   padding: 80px 0;
   scroll-margin-top: 100px;
 }
-
 .section-title {
   text-align: center;
   margin-bottom: 40px;
 }
-
 .section-title h2 {
   font-size: clamp(30px, 5vw, 43px);
   text-transform: uppercase;
 }
-
 .section-title p {
   color: var(--gray);
   margin-top: 8px;
 }
-
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
 }
-
 .about-image img {
   width: 100%;
   max-height: 500px;
@@ -195,30 +169,25 @@ section {
   border-radius: 8px;
   border: 1px solid #333;
 }
-
 .about-text h3 {
   color: var(--gold);
   font-size: 28px;
   margin-bottom: 15px;
 }
-
 .about-text p {
   color: #cccccc;
   margin-bottom: 15px;
 }
-
 .music-section,
 .gallery,
 .contact {
   background: #101010;
 }
-
 .music-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
-
 .music-card {
   background: #181818;
   border: 1px solid #2b2b2b;
@@ -227,32 +196,26 @@ section {
   text-align: center;
   transition: 0.3s;
 }
-
 .music-card:hover {
   transform: translateY(-5px);
   border-color: var(--gold);
 }
-
 .music-icon {
   font-size: 42px;
   margin-bottom: 15px;
 }
-
 .music-card h3 {
   font-size: 23px;
   margin-bottom: 8px;
 }
-
 .music-card p {
   color: var(--gray);
   margin-bottom: 20px;
   font-size: 14px;
 }
-
 .music-card .btn {
   width: 100%;
 }
-
 .video-box {
   text-align: center;
   max-width: 700px;
@@ -262,23 +225,19 @@ section {
   border-radius: 8px;
   padding: 35px 20px;
 }
-
 .video-box h3 {
   font-size: 25px;
   margin-bottom: 10px;
 }
-
 .video-box p {
   color: var(--gray);
   margin-bottom: 20px;
 }
-
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
-
 .gallery-grid img {
   width: 100%;
   height: 360px;
@@ -286,7 +245,6 @@ section {
   border-radius: 8px;
   border: 1px solid #333;
 }
-
 .events-box {
   text-align: center;
   padding: 35px 20px;
@@ -294,18 +252,15 @@ section {
   border: 1px solid #292929;
   border-radius: 8px;
 }
-
 .events-box h3 {
   color: var(--gold);
   font-size: 25px;
   margin-bottom: 10px;
 }
-
 .events-box p {
   color: var(--gray);
   margin-bottom: 20px;
 }
-
 .social-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -313,7 +268,6 @@ section {
   max-width: 750px;
   margin: auto;
 }
-
 .social-link {
   display: block;
   padding: 20px;
@@ -324,25 +278,20 @@ section {
   border-radius: 6px;
   font-weight: bold;
 }
-
 .social-link:hover {
   border-color: var(--gold);
   color: var(--gold);
 }
-
 .contact {
   text-align: center;
 }
-
 .contact p {
   color: var(--gray);
   margin: 10px 0;
 }
-
 .contact .buttons {
   justify-content: center;
 }
-
 footer {
   text-align: center;
   padding: 25px 15px;
@@ -351,72 +300,57 @@ footer {
   color: #999;
   font-size: 13px;
 }
-
 footer span {
   color: var(--gold);
 }
-
 @media (max-width: 750px) {
   .navbar {
     flex-direction: column;
   }
-
   nav {
     justify-content: center;
     gap: 12px;
   }
-
   .hero {
     min-height: 75vh;
     background-position: 58% center;
   }
-
   .hero h1 {
     font-size: 52px;
   }
-
   .about-grid,
   .music-grid,
   .gallery-grid {
     grid-template-columns: 1fr;
   }
-
   .about-grid {
     gap: 25px;
   }
-
   .gallery-grid img {
     height: auto;
     max-height: 480px;
   }
-
   section {
     padding: 60px 0;
   }
 }
-
 @media (max-width: 380px) {
   .hero h1 {
     font-size: 43px;
   }
-
   .social-grid {
     grid-template-columns: 1fr;
   }
-
   .btn {
     padding: 12px 16px;
   }
 }
 </style>
 </head>
-
 <body>
-
 <header>
   <div class="container navbar">
     <a href="#home" class="logo">TERRY NATION</a>
-
     <nav>
       <a href="#home">Home</a>
       <a href="#about">About</a>
@@ -424,34 +358,28 @@ footer span {
       <a href="#videos">Videos</a>
       <a href="#gallery">Gallery</a>
       <a href="#events">Events</a>
+      <a href="#socials">Socials</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
-
 <main>
-
 <section class="hero" id="home">
   <div class="container">
     <div class="hero-content">
       <div class="eyebrow">Official Artist Website</div>
-
       <h1>TERRY <span>NATION</span></h1>
-
       <p>
         Welcome to the official home of Terry Nation.
         Discover the music, experience the sound, and stay
         connected for new releases, videos, and updates.
       </p>
-
       <div class="buttons">
         <a class="btn"
            href="https://li.sten.to/z4ipx0d1"
-           target="_blank"
            rel="noopener noreferrer">
           STREAM DANCEFLOOR
         </a>
-
         <a class="btn btn-outline" href="#music">
           EXPLORE MUSIC
         </a>
@@ -459,44 +387,36 @@ footer span {
     </div>
   </div>
 </section>
-
 <section id="about">
   <div class="container">
     <div class="section-title">
       <h2>ABOUT <span>TERRY NATION</span></h2>
       <p>Get to know the artist behind the music.</p>
     </div>
-
     <div class="about-grid">
       <div class="about-image">
         <img
           src="/images/f88218ad-f6cc-4622-b883-c95d34ccded8.jpeg"
           alt="Terry Nation artist portrait">
       </div>
-
       <div class="about-text">
         <h3>The Sound. The Vision. The Journey.</h3>
-
         <p>
           Terry Nation is an artist and music creator building
           his sound, sharing his creativity, and connecting
           with listeners through music.
         </p>
-
         <p>
           From studio sessions to new releases and live
           experiences, follow the journey and discover the
           music as it unfolds.
         </p>
-
         <p>
           Stay connected for new songs, videos, behind-the-scenes
           moments, and upcoming appearances.
         </p>
-
         <a class="btn"
            href="https://www.tiktok.com/@itzterryonthetrack"
-           target="_blank"
            rel="noopener noreferrer">
           FOLLOW THE JOURNEY
         </a>
@@ -504,95 +424,78 @@ footer span {
     </div>
   </div>
 </section>
-
 <section class="music-section" id="music">
   <div class="container">
     <div class="section-title">
       <h2>LATEST <span>MUSIC</span></h2>
-      <p>Listen to Terry Nation's releases.</p>
+      <p>Choose your preferred platform to listen to Terry Nation.</p>
     </div>
-
     <div class="music-grid">
-
       <div class="music-card">
         <div class="music-icon">🎵</div>
         <h3>DANCEFLOOR</h3>
-        <p>Listen, share, and enjoy the music.</p>
+        <p>Listen on your preferred music platform.</p>
         <a class="btn"
            href="https://li.sten.to/z4ipx0d1"
-           target="_blank"
            rel="noopener noreferrer">
-          STREAM NOW
+          CHOOSE LISTENING PLATFORM
         </a>
       </div>
-
       <div class="music-card">
         <div class="music-icon">☀️</div>
         <h3>SUNNY DAYS</h3>
-        <p>Find the song and share it with your people.</p>
+        <p>Find the song on your favourite service.</p>
         <a class="btn"
            href="https://ffm.to/sunny-days-dqaj"
-           target="_blank"
            rel="noopener noreferrer">
-          STREAM NOW
+          CHOOSE LISTENING PLATFORM
         </a>
       </div>
-
       <div class="music-card">
         <div class="music-icon">🔥</div>
         <h3>WTFAY?</h3>
-        <p>Check out the latest release.</p>
+        <p>Listen to the latest release.</p>
         <a class="btn"
            href="https://release.studio/wtfay"
-           target="_blank"
            rel="noopener noreferrer">
-          LISTEN NOW
+          CHOOSE LISTENING PLATFORM
         </a>
       </div>
-
     </div>
   </div>
 </section>
-
 <section id="videos">
   <div class="container">
     <div class="section-title">
       <h2>MUSIC <span>VIDEOS</span></h2>
       <p>Watch, discover, and stay connected.</p>
     </div>
-
     <div class="video-box">
       <div class="music-icon">▶️</div>
       <h3>Watch Terry Nation on YouTube</h3>
-
       <p>
         Explore music content, videos, studio moments,
         and more on the official YouTube channel.
       </p>
-
       <a class="btn"
          href="https://youtube.com/@terrymusicworld"
-         target="_blank"
          rel="noopener noreferrer">
         VISIT YOUTUBE CHANNEL
       </a>
     </div>
   </div>
 </section>
-
 <section class="gallery" id="gallery">
   <div class="container">
     <div class="section-title">
       <h2>PHOTO <span>GALLERY</span></h2>
       <p>Moments from Terry Nation's journey.</p>
     </div>
-
     <div class="gallery-grid">
       <img
         src="/images/IMG_8955.jpeg"
         alt="Terry Nation photo gallery image"
         loading="lazy">
-
       <img
         src="/images/f88218ad-f6cc-4622-b883-c95d34ccded8.jpeg"
         alt="Terry Nation artist portrait"
@@ -600,22 +503,18 @@ footer span {
     </div>
   </div>
 </section>
-
 <section id="events">
   <div class="container">
     <div class="section-title">
       <h2>SHOWS & <span>EVENTS</span></h2>
       <p>For performances, appearances, and bookings.</p>
     </div>
-
     <div class="events-box">
       <h3>Book Terry Nation</h3>
-
       <p>
         Interested in booking Terry Nation for a show,
         event, or performance? Contact the team for enquiries.
       </p>
-
       <a class="btn"
          href="mailto:Terrymusicteam@gmail.com?subject=Terry%20Nation%20Booking%20Enquiry">
         BOOKING ENQUIRIES
@@ -623,67 +522,51 @@ footer span {
     </div>
   </div>
 </section>
-
 <section id="socials">
   <div class="container">
     <div class="section-title">
       <h2>FOLLOW <span>TERRY NATION</span></h2>
       <p>Stay connected for music, videos, and updates.</p>
     </div>
-
     <div class="social-grid">
-
       <a class="social-link"
          href="https://www.tiktok.com/@itzterryonthetrack"
-         target="_blank"
          rel="noopener noreferrer">
         🎵 TikTok
       </a>
-
       <a class="social-link"
          href="https://youtube.com/@terrymusicworld"
-         target="_blank"
          rel="noopener noreferrer">
         ▶ YouTube
       </a>
-
       <a class="social-link"
          href="https://li.sten.to/z4ipx0d1"
-         target="_blank"
          rel="noopener noreferrer">
         🎧 DANCEFLOOR
       </a>
-
       <a class="social-link"
          href="https://ffm.to/sunny-days-dqaj"
-         target="_blank"
          rel="noopener noreferrer">
         ☀ SUNNY DAYS
       </a>
-
       <a class="social-link"
          href="https://release.studio/wtfay"
-         target="_blank"
          rel="noopener noreferrer">
         🔥 WTFAY?
       </a>
-
       <a class="social-link"
          href="mailto:Terrymusicteam@gmail.com">
         ✉ Email the Team
       </a>
-
     </div>
   </div>
 </section>
-
 <section class="contact" id="contact">
   <div class="container">
     <div class="section-title">
       <h2>GET IN <span>TOUCH</span></h2>
       <p>For bookings, collaborations, and business enquiries.</p>
     </div>
-
     <p>
       Email:
       <a style="color:var(--gold)"
@@ -691,17 +574,13 @@ footer span {
         Terrymusicteam@gmail.com
       </a>
     </p>
-
     <p>Bookings and enquiries are welcome.</p>
-
     <div class="buttons">
       <a class="btn"
          href="https://wa.me/2348161512750?text=Hello%20Terry%20Nation%20Team%2C%20I%20would%20like%20to%20make%20an%20enquiry."
-         target="_blank"
          rel="noopener noreferrer">
         CHAT ON WHATSAPP
       </a>
-
       <a class="btn btn-outline"
          href="mailto:Terrymusicteam@gmail.com?subject=Terry%20Nation%20Enquiry">
         SEND AN EMAIL
@@ -709,9 +588,7 @@ footer span {
     </div>
   </div>
 </section>
-
 </main>
-
 <footer>
   <p>
     &copy; <span id="year"></span>
@@ -720,11 +597,10 @@ footer span {
   </p>
   <p>Official Artist Website</p>
 </footer>
-
 <script>
 document.getElementById("year").textContent =
   new Date().getFullYear();
 </script>
-
 </body>
 </html>
+`
