@@ -1,0 +1,13 @@
+media:
+  input: images
+  output: /images
+content:
+  - name: site
+    label: Website
+    type: file
+    path: index.html
+    format: html
+    fields:
+      - name: page_content
+        label: Website HTML
+        type: text
