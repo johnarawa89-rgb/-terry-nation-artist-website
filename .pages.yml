@@ -27,14 +27,11 @@ content:
       - name: youtube
         label: YouTube Link
         type: string
-              - name: youtube
-        label: YouTube Link
-        type: string
 
-          - name: gallery
+  - name: gallery
     label: Photo Gallery
-    path: content/gallery
     type: collection
+    path: content/gallery
     fields:
       - name: title
         label: Photo Title
