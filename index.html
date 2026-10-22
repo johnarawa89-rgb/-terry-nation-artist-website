@@ -1,9 +1,12 @@
+}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Official website of Terry Nation — music, videos, photos, performances and latest updates.">
+<meta name="theme-color" content="#080808">
 <title>Terry Nation | Official Artist Website</title>
 <style>
 :root {
@@ -17,6 +20,7 @@
 }
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 body {
   margin: 0;
@@ -32,6 +36,9 @@ a {
 a:hover {
   opacity: 0.8;
 }
+img {
+  max-width: 100%;
+}
 .wrap {
   width: min(1120px, 92%);
   margin: auto;
@@ -41,7 +48,7 @@ header {
   top: 0;
   background: rgba(8, 8, 8, 0.96);
   border-bottom: 1px solid #29231a;
-  z-index: 10;
+  z-index: 100;
   backdrop-filter: blur(8px);
 }
 .nav {
@@ -56,6 +63,7 @@ header {
   font-weight: 900;
   letter-spacing: 0.14em;
   color: var(--gold);
+  white-space: nowrap;
 }
 nav {
   display: flex;
@@ -67,13 +75,30 @@ nav a {
   color: #f4f0e8;
 }
 .hero {
-  min-height: 76vh;
-  display: grid;
+  min-height: 85vh;
+  display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
   background:
-    radial-gradient(ellipse at 70% 40%, #6e54251c, transparent 48%),
-    linear-gradient(120deg, #080808, #15120c 65%, #080808);
+    linear-gradient(
+      90deg,
+      rgba(8,8,8,0.96) 0%,
+      rgba(8,8,8,0.78) 45%,
+      rgba(8,8,8,0.25) 100%
+    ),
+    linear-gradient(
+      rgba(8,8,8,0.15),
+      rgba(8,8,8,0.45)
+    ),
+    url('/images/f88218ad-f6cc-4622-b883-c95d34ccded8.jpeg')
+    center 30% / cover no-repeat;
   padding: 70px 0;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
 }
 .eyebrow {
   color: var(--gold);
@@ -90,7 +115,7 @@ nav a {
 }
 .hero p {
   max-width: 590px;
-  color: #d0ccc4;
+  color: #e1ddd5;
   font-size: 1.1rem;
 }
 .btn {
@@ -99,10 +124,14 @@ nav a {
   border: 1px solid var(--gold);
   margin: 8px 10px 0 0;
   font-weight: bold;
+  transition: 0.3s;
 }
 .btn.primary {
   background: var(--gold);
   color: #080808;
+}
+.btn:hover {
+  transform: translateY(-2px);
 }
 section {
   padding: 72px 0;
@@ -184,8 +213,12 @@ footer {
     gap: 12px;
   }
   .hero {
-    min-height: 65vh;
+    min-height: 75vh;
     padding: 50px 0;
+    background-position: center center;
+  }
+  .hero h1 {
+    font-size: clamp(3rem, 15vw, 5rem);
   }
   .photos {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -201,165 +234,178 @@ footer {
 <header>
   <div class="wrap nav">
     <a class="brand" href="#home">TERRY NATION</a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#music">Music</a>
-      <a href="#videos">Videos</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#events">Events</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<nav aria-label="Main navigation">
+  <a href="#about">About</a>
+  <a href="#music">Music</a>
+  <a href="#videos">Videos</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#events">Events</a>
+  <a href="#contact">Contact</a>
+</nav>
   </div>
 </header>
 <main>
-<!-- HOME -->
+<!-- HOME / COVER PHOTO -->
 <section class="hero" id="home">
-  <div class="wrap">
+  <div class="wrap hero-content">
     <div class="eyebrow">Official Artist Website</div>
-    <h1>TERRY<br>NATION.</h1>
-    <p>
-      Music, movement, and moments that stay with you.
-      Discover the music, watch the videos, explore the journey,
-      and stay connected with Terry Nation.
-    </p>
-    <a class="btn primary" href="#music">Explore Music</a>
-    <a class="btn" href="#contact">Follow the Journey</a>
+<h1>TERRY<br>NATION.</h1>
+<p>
+  Music, movement, and moments that stay with you.
+  Discover the music, watch the videos, explore the journey,
+  and stay connected with Terry Nation.
+</p>
+<a class="btn primary" href="#music">Explore Music</a>
+<a class="btn" href="#contact">Follow the Journey</a>
   </div>
 </section>
 <!-- ABOUT -->
 <section id="about">
   <div class="wrap">
     <div class="eyebrow">The Artist</div>
-    <h2 class="section-title">About Terry Nation</h2>
-    <p class="sub">A sound and story still unfolding.</p>
-    <div class="card">
-      <p id="bioText">
-        Terry Nation is an artist passionate about creating music
-        and sharing memorable experiences through sound and performance.
-        Explore his releases, studio sessions, live appearances,
-        and latest updates as his musical journey continues.
-      </p>
-    </div>
+<h2 class="section-title">About Terry Nation</h2>
+<p class="sub">A sound and story still unfolding.</p>
+<div class="card">
+  <p>
+    Terry Nation is an artist passionate about creating music
+    and sharing memorable experiences through sound and performance.
+    Explore his releases, studio sessions, live appearances,
+    and latest updates as his musical journey continues.
+  </p>
+</div>
   </div>
 </section>
 <!-- MUSIC -->
 <section id="music">
   <div class="wrap">
     <div class="eyebrow">Listen Now</div>
-    <h2 class="section-title">Music</h2>
-    <p class="sub">
-      Discover Terry Nation's releases and favourite tracks.
-    </p>
-    <div class="grid">
-      <div class="card">
-        <span class="pill">OUT NOW</span>
-        <h3>DANCEFLOOR</h3>
-        <p>Turn up the energy and enjoy the sound.</p>
-        <a href="#contact">Listen to DANCEFLOOR →</a>
-      </div>
-      <div class="card">
-        <span class="pill">OUT NOW</span>
-        <h3>SUNNY DAYS</h3>
-        <p>Good vibes and brighter days through music.</p>
-        <a href="#contact">Listen to SUNNY DAYS →</a>
-      </div>
-      <div class="card">
-        <span class="pill">LATEST RELEASE</span>
-        <h3>WTFAY?</h3>
-        <p>Check out the latest release from Terry Nation.</p>
-        <a href="#contact">Listen to WTFAY? →</a>
-      </div>
-    </div>
+<h2 class="section-title">Music</h2>
+<p class="sub">
+  Discover Terry Nation's releases and favourite tracks.
+</p>
+<div class="grid">
+  <div class="card">
+    <span class="pill">OUT NOW</span>
+    <h3>DANCEFLOOR</h3>
+    <p>Turn up the energy and enjoy the sound.</p>
+    <a href="#contact">Listen to DANCEFLOOR →</a>
+  </div>
+  <div class="card">
+    <span class="pill">OUT NOW</span>
+    <h3>SUNNY DAYS</h3>
+    <p>Good vibes and brighter days through music.</p>
+    <a href="#contact">Listen to SUNNY DAYS →</a>
+  </div>
+  <div class="card">
+    <span class="pill">LATEST RELEASE</span>
+    <h3>WTFAY?</h3>
+    <p>Check out the latest release from Terry Nation.</p>
+    <a href="#contact">Listen to WTFAY? →</a>
+  </div>
+</div>
   </div>
 </section>
 <!-- VIDEOS -->
 <section id="videos">
   <div class="wrap">
     <div class="eyebrow">Watch</div>
-    <h2 class="section-title">Videos</h2>
-    <p class="sub">
-      Music videos, studio sessions, live performances,
-      and behind-the-scenes moments.
-    </p>
-    <div class="card">
-      <h3>Watch Terry Nation</h3>
-      <p>
-        Visit Terry Nation's official YouTube channel to discover
-        music videos, performances, and new content.
-      </p>
-      <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
-        Visit YouTube →
-      </a>
-    </div>
+<h2 class="section-title">Videos</h2>
+<p class="sub">
+  Music videos, studio sessions, live performances,
+  and behind-the-scenes moments.
+</p>
+<div class="card">
+  <h3>Watch Terry Nation</h3>
+  <p>
+    Visit Terry Nation's official YouTube channel to discover
+    music videos, performances, and new content.
+  </p>
+  <a href="https://www.youtube.com/"
+     target="_blank"
+     rel="noopener noreferrer">
+    Visit YouTube →
+  </a>
+</div>
   </div>
 </section>
 <!-- PHOTO GALLERY -->
 <section id="gallery">
   <div class="wrap">
     <div class="eyebrow">In Pictures</div>
-    <h2 class="section-title">Gallery</h2>
-    <p class="sub">
-      Artist portraits, studio sessions, and show highlights.
-    </p>
-    <div class="photos">
-      <img
-        src="/images/IMG_8955.jpeg"
-        alt="Terry Nation artist photograph"
-        loading="lazy"
-      >
-    </div>
+<h2 class="section-title">Gallery</h2>
+<p class="sub">
+  Artist portraits, studio sessions, and show highlights.
+</p>
+<div class="photos">
+  <img
+    src="/images/IMG_8955.jpeg"
+    alt="Terry Nation artist photograph"
+    loading="lazy"
+  >
+  <img
+    src="/images/f88218ad-f6cc-4622-b883-c95d34ccded8.jpeg"
+    alt="Terry Nation cover photograph"
+    loading="lazy"
+  >
+</div>
   </div>
 </section>
 <!-- EVENTS -->
 <section id="events">
   <div class="wrap">
     <div class="eyebrow">On The Move</div>
-    <h2 class="section-title">Events & Performances</h2>
-    <p class="sub">
-      Stay updated on appearances, performances, and announcements.
-    </p>
-    <div class="card">
-      <h3>More Shows Coming Soon</h3>
-      <p>
-        Check back for upcoming dates, event announcements,
-        and performance updates.
-      </p>
-    </div>
+<h2 class="section-title">Events & Performances</h2>
+<p class="sub">
+  Stay updated on appearances, performances, and announcements.
+</p>
+<div class="card">
+  <h3>More Shows Coming Soon</h3>
+  <p>
+    Check back for upcoming dates, event announcements,
+    and performance updates.
+  </p>
+</div>
   </div>
 </section>
 <!-- CONTACT AND SOCIAL MEDIA -->
 <section id="contact">
   <div class="wrap">
     <div class="eyebrow">Stay Connected</div>
-    <h2 class="section-title">Follow Terry Nation</h2>
-    <p class="sub">
-      Follow Terry Nation online and stay connected with the journey.
-    </p>
-    <div class="socials">
-      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
-      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
-      <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
-      <a href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">Spotify</a>
-      <a href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">Apple Music</a>
-    </div>
-    <p style="margin-top:30px;color:#aaa">
-      Bookings and enquiries: official contact details coming soon.
-    </p>
+<h2 class="section-title">Follow Terry Nation</h2>
+<p class="sub">
+  Follow Terry Nation online and stay connected with the journey.
+</p>
+<div class="socials">
+  <a href="https://www.instagram.com/"
+     target="_blank" rel="noopener noreferrer">Instagram</a>
+  <a href="https://www.tiktok.com/"
+     target="_blank" rel="noopener noreferrer">TikTok</a>
+  <a href="https://www.facebook.com/"
+     target="_blank" rel="noopener noreferrer">Facebook</a>
+  <a href="https://www.youtube.com/"
+     target="_blank" rel="noopener noreferrer">YouTube</a>
+  <a href="https://open.spotify.com/"
+     target="_blank" rel="noopener noreferrer">Spotify</a>
+  <a href="https://music.apple.com/"
+     target="_blank" rel="noopener noreferrer">Apple Music</a>
+</div>
+<p style="margin-top:30px;color:#aaa">
+  Bookings and enquiries: official contact details coming soon.
+</p>
   </div>
 </section>
 </main>
 <footer>
   <div class="wrap">
     © <span id="year"></span> Terry Nation. All rights reserved.
-    <span style="float:right">
-      <a href="/admin/">Content Editor</a>
-    </span>
+<span style="float:right">
+  <a href="/admin/">Content Editor</a>
+</span>
   </div>
 </footer>
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 </script>
 </body>
-</html>
-``
+</html
