@@ -1,6 +1,9 @@
 media:
-  input: images
-  output: /images
+  - name: images
+    label: Images
+    input: images
+    output: /images
+    extensions: [jpg, jpeg, png, webp]
 
 content:
   - name: site
@@ -39,3 +42,5 @@ content:
       - name: image
         label: Photo
         type: image
+        options:
+          media: images
